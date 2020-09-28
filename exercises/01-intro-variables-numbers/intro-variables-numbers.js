@@ -1,36 +1,39 @@
 function myName() {
   // Create a variable called myName
+  let myName = "Joy";
   return myName;
 }
 
 function setTeachersNames(teachersName) {
   // change code below this line so that we can set the variable.
-  const teachers = null;
-  teachers = teachersName; //  <- this is invalid because teachers is a const. How can we fix this?
+  const teachers = teachersName;
+  teachersName = "Matina Patsos + ' ' + Jamal Taylor"; //  <- this is invalid because teachers is a const. How can we fix this?
 
   return teachers;
 }
 
 /*** return the sum of both arguments  ***/
 function add(a, b) {
-  let sum;
-
+  let sum = a + b;
   return sum;
 }
 
 /*** Using the increment operator, add a year to the argument and make me older */
 function ageMeByAYear(age) {
+  ++age;
   return age;
 }
 
 /*** Using the decrement operator make me age decrement by a year  ***/
 function makeMeYoungerByAYear(age) {
+  --age;
   return age;
 }
 
 /** Take the argument that will be a string and return an integer  */
 function convertStringToInt(str) {
-  let int;
+  let int = parseInt(str);
+
   return int;
 }
 
@@ -44,14 +47,16 @@ function convertStringToInt(str) {
  *
  */
 function getTheCharacterPosition(name, letter) {
-  let characterPosition;
+  let start = name.index0f("");
+  let char = letter[0];
+  let characterPosition = start + "," + char;
   return characterPosition;
 }
 
 /** Take the argument and return the length of the argument */
 
 function stringLength(str) {
-  let strLength;
+  let strLength = str.length;
 
   return strLength;
 }
@@ -64,7 +69,7 @@ function stringLength(str) {
  */
 
 function getLastCharacter(str) {
-  let lastCharacter;
+  let lastCharacter = str[str.length - 1];
 
   return lastCharacter;
 }
@@ -82,7 +87,8 @@ function getLastCharacter(str) {
  */
 
 function getLastWordInPlaceName(place) {
-  let newPlace;
+  let index = place.indexOf(" ");
+  let newPlace = place.substring(index + 1);
 
   return newPlace;
 }
@@ -93,7 +99,13 @@ function getLastWordInPlaceName(place) {
  */
 
 function getLargerNumber(arg1, arg2) {
-  let largestNumber;
+  let largestNumber = 10;
+
+  if (arg1 > arg2) {
+    console.log(arg1);
+  } else if (arg2 > arg1) {
+    console.log(arg2);
+  }
 
   return largestNumber;
 }
@@ -111,19 +123,28 @@ function getLargerNumber(arg1, arg2) {
  */
 
 function replaceLastName(fullName, newLastName) {
-  let newFullName;
+  let lastNameStart = fullName.indexOf(" ");
+  let lastNameAll = fullName.substring(lastNameStart + 1);
+  let newFullName = fullName.replace(lastNameAll, newLastName);
   return newFullName;
 }
 
 /***
  *  Capitalize the first letter in a last name
- *  i.e John smith -> John Smith
+ *  i.e John snow -> John Snow
+ *  fullLastName -> newFullLastName
  */
 
 function capitalizeLastName(fullName) {
-  let capitalizeLastName;
+  let index = fullName.indexOf(" ");
+  let fullLastName = fullName.substring(index + 1);
+  console.log(`fullLastName: ${fullLastName}`);// doe
+  let newLastName = fullLastName[0].toUpperCase() + fullLastName.substring(1);
+  console.log(`newLastName: ${newLastName}`); // Doe
 
-  return capitalizeLastName;
+  let capitalizeLastName = fullName.replace(fullLastName, newLastName
+  );
+  return capitalizeLastName; // John Smith
 }
 
 /**
