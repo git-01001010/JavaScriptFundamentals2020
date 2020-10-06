@@ -11,7 +11,17 @@
  * console.log(array[2]) // [1, 2, 3, 4]
  */
 
-const createAnArray = () => {};
+const createAnArray = () => {
+  let newArr = [
+    "this",
+    (() => "that"),
+    ["is", "mind", "blowing"],
+  ];
+
+  return newArr;
+};
+console.log(createAnArray());
+
 
 /**
  * Using "split", uppercase the target word in the string.
