@@ -73,13 +73,8 @@ const createArrayOfFunctions = () => {
  *
  **/
 const highestNumber = () => {
-  let number;
-  for (let i = 0; i < numbers.length; i++) {
-    if (number < numbers[i]) {
-      number = numbers[i];
-    } 
-  }
-}
+ 
+};
 
 /**
  * Given an array of objects, where each object has an ID,
@@ -120,11 +115,7 @@ const highestNumber = () => {
 
 // const findAndAbort = (arr, id) => {};
 const findAndAbort = (arr, id) => {
-    for (let i = 0; i < arr.length; i++) {
-    if (arr[i][id] === id) {
-      return arr[i];
-      } break;
-     }
+  
 };
 
 /**
